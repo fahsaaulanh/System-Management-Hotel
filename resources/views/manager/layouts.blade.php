@@ -44,6 +44,10 @@
     
   </nav>
 
+ <!-- Page Content Here -->
+  @yield('content')
+ <!-- End Page Content -->
+  
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Name/Logo -->
@@ -66,7 +70,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
           <li class="nav-item menu-open">
-            <a href="{{url('/home')}}" class="nav-link active">
+            <a href="{{url('/home')}}" class="nav-link {{ (request()->is('home*')) ? 'active' : '' }}">
               <i class="nav-icon fas fa-home"></i>
               <p>Dashboard</p>
             </a>
@@ -78,13 +82,13 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{url('/check-in')}}" class="nav-link">
+                  <a href="{{url('/check-in')}}" class="nav-link {{ (request()->is('check-in*')) ? 'active' : '' }}">
                     <i class="fa fa-map-location-dot nav-icon"></i>
                     <p>Check-In</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{url('/check-out')}}" class="nav-link">
+                  <a href="{{url('/check-out')}}" class="nav-link {{ (request()->is('check-out*')) ? 'active' : '' }}">
                     <i class="fa fa-cart-arrow-down nav-icon"></i>
                     <p>Check-Out</p>
                   </a>
@@ -93,8 +97,17 @@
           </li>
         </ul>
       </nav>
-
+  
     </div>
-
+    
   </aside>
+  
+ <!-- Footer -->
+ <footer class="main-footer">
+    <strong>Copyright &copy; 2021 <a href="#">InSitu Hotel</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 1.0
+    </div>
+  </footer>
 </html>

@@ -25,4 +25,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function checkin()
+    {
+        return view('manager.room-reservation.check-in');
+    }
+
+    public function checkout()
+    {
+        return view('manager.room-reservation.check-out');
+    }
 }
