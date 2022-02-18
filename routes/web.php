@@ -20,3 +20,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/check-in', [App\Http\Controllers\HomeController::class, 'checkin'])->name('checkin');
+Route::get('/check-out', [App\Http\Controllers\HomeController::class, 'checkout'])->name('checkout');
