@@ -22,9 +22,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-<<<<<<< HEAD
-Route::resource('tamu', TamuController::class);
-=======
+
 Route::get('/check-in', [App\Http\Controllers\HomeController::class, 'checkin'])->name('checkin');
 Route::get('/check-out', [App\Http\Controllers\HomeController::class, 'checkout'])->name('checkout');
->>>>>>> 0cf3ffb7b9ba4d04072538d616df3862c6202787
