@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Kamar extends Model
 {
     use HasFactory;
-    protected $guest = [];
+    protected $guarded = [];
 }

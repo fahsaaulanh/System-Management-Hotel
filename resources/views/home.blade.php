@@ -1,1 +1,1 @@
-@extends('manager.dashboard')
+@extends('layouts.app')

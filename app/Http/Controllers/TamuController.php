@@ -36,6 +36,7 @@ class TamuController extends Controller
      */
     public function store(Request $request)
     {
+
         $validateData = $request->validate([
             'nama' => 'required',
             'jk' => 'required',
@@ -43,12 +44,12 @@ class TamuController extends Controller
             'no_ktp' => 'required',
             'wn' => 'required',
             'alamat' => 'required',
-            'email' => 'required|email|unique',
+            'email' => 'required|email',
         ]);
 
         Tamu::create($validateData);
 
-        return redirect('/tamu')->with('pesan', "Tamu $request->nama berhasil ditambahkan");
+        return redirect('/tamu')->with('success', 'Profile updated!');;
     }
 
     /**
@@ -59,7 +60,7 @@ class TamuController extends Controller
      */
     public function show(Tamu $tamu)
     {
-        //
+        return view('tamu.show', compact('tamu'));
     }
 
     /**
@@ -70,6 +71,7 @@ class TamuController extends Controller
      */
     public function edit(Tamu $tamu)
     {
+
         return view('tamu.edit', compact('tamu'));
     }
 
@@ -89,7 +91,7 @@ class TamuController extends Controller
             'no_ktp' => 'required',
             'wn' => 'required',
             'alamat' => 'required',
-            'email' => 'required|email|unique',
+            'email' => 'required|email',
         ]);
 
         $tamu->update($validateData);
@@ -105,6 +107,16 @@ class TamuController extends Controller
      */
     public function destroy(Tamu $tamu)
     {
-        //
+        $tamu->delete();
+        return redirect('tamu');
+    }
+
+    public function search(Request $request)
+    {
+        $tamus = Tamu::where('nama', 'LIKE', '%' . $request->nama . '%')
+            ->orderBy('nama', 'asc')
+            ->get();
+
+        return view('tamu.index', compact('tamus'));
     }
 }

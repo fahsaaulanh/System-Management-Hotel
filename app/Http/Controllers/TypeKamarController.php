@@ -14,7 +14,8 @@ class TypeKamarController extends Controller
      */
     public function index()
     {
-        //
+        $type_kamars = TypeKamar::all();
+        return view('type-kamar.index', compact('type_kamars'));
     }
 
     /**
@@ -24,7 +25,7 @@ class TypeKamarController extends Controller
      */
     public function create()
     {
-        //
+        return view('type-kamar.create');
     }
 
     /**
@@ -35,7 +36,15 @@ class TypeKamarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData = $request->validate([
+            'jenis' => 'required',
+            'harga' => 'required|integer',
+            'denda' => 'required',
+            'keterangan' => 'required',
+        ]);
+
+        TypeKamar::create($validateData);
+        return redirect('/type-kamar');
     }
 
     /**
@@ -57,7 +66,7 @@ class TypeKamarController extends Controller
      */
     public function edit(TypeKamar $typeKamar)
     {
-        //
+        return view('type-kamar.edit', compact('typeKamar'));
     }
 
     /**
@@ -69,7 +78,15 @@ class TypeKamarController extends Controller
      */
     public function update(Request $request, TypeKamar $typeKamar)
     {
-        //
+        $validateData = $request->validate([
+            'jenis' => 'required',
+            'harga' => 'required|integer',
+            'denda' => 'required',
+            'keterangan' => 'required',
+        ]);
+
+        $typeKamar->update($validateData);
+        return redirect('/type-kamar');
     }
 
     /**
@@ -80,6 +97,16 @@ class TypeKamarController extends Controller
      */
     public function destroy(TypeKamar $typeKamar)
     {
-        //
+        $typeKamar->delete();
+        return redirect('/type-kamar');
+    }
+
+    public function search(Request $request)
+    {
+        $type_kamars = TypeKamar::where('jenis', 'LIKE', '%' . $request->jenis . '%')
+            ->orderBy('jenis', 'asc')
+            ->get();
+
+        return view('type-kamar.index', compact('type_kamars'));
     }
 }
