@@ -4,7 +4,7 @@
         <div class="modal-content">
             <!-- modal header -->
             <div class="modal-header">
-                <h4 class="modal-title">Type Kamar</h4>
+                <h4 class="modal-title">Room Type</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
@@ -13,26 +13,25 @@
             <div class="modal-body">
                 <div class="card-tittle"></div>
                 <div class="card-body table-responsive p-0" style="height: 300px;">
-                    <table class="table table-head-fixed table table-hover text-nowrap">
+                    <table class="table table-head-fixed table table-hover text-nowrap m-2">
                         <thead>
-                            <tr class="table-danger">
-                                <th scope="col">Jenis</th>
-                                <th scope="col">Harga / malam</th>
-                                <th scope="col">Harga / orang</th>
-                                <th style="width: 100px;">Keterangan</th>
-                                <th></th>
+                            <tr class="table">
+                                <th scope="col">Type</th>
+                                <th scope="col">Price / Night</th>
+                                <th scope="col">Charge / Guest</th>
+                                <th style="width: 100px;">Description</th>
                             </tr>
                         </thead>
                         <tbody>
                             @forelse ($type_kamars as $typeKamar)
                             <tr class=" table-hover">
-                                <td><a href="?menu=penjualan&id_type_kamar={{$typeKamar->id}}&jenis={{$typeKamar->jenis}}">{{ $typeKamar->jenis}}</a> </td>
+                                <td><a href="?menu=penjualan&type_kamar_id={{$typeKamar->id}}&jenis={{$typeKamar->jenis}}">{{ $typeKamar->jenis}}</a> </td>
                                 <td>{{ $typeKamar->harga}}</td>
                                 <td>{{ $typeKamar->denda}}</td>
                                 <td>{{ $typeKamar->keterangan}} </td>
                             </tr>
                             @empty
-                            <td colspan="6" class="text-center">Tidak ada data...</td>
+                            <td colspan="6" class="text-center">No data...</td>
                             @endforelse
                         </tbody>
                     </table>

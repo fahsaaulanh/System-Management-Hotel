@@ -10,12 +10,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="">Management Type Kamar</h1>
+                    <h4 class="">Room Type Management</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="/home">Home</a></li>
-                        <li class="breadcrumb-item active">Management Type Kamar</li>
+                        <li class="breadcrumb-item active">Room Type Management</li>
                     </ol>
                 </div>
             </div>
@@ -27,38 +27,49 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <div class="card">
+                    <div class="card shadow">
                         <div class="card card-danger card-outline">
                             <div class="card-header">
-                                <h3 class="card-title"> <a href="{{ route('type-kamar.create') }}" class="btn btn-outline-info">
-                                        <i class="fa fa-plus"></i>
-                                        Tambah Type Kamar
-                                    </a>
+                                <h3 class="card-title">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <a href="{{ route('type-kamar.create') }}" class="btn btn-info">
+                                                <i class="fa fa-plus"></i>
+                                                Add Room Type
+                                            </a>
+                                        </div>
+                                        <div class="col-3">
+                                            <a class="btn btn-danger " href="/laporan/type-kamar/download">
+                                                <i class="fas fa-file-pdf"> </i> Download
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="input-group input-group-sm float-right" style="width: 250px;">
+                                                <form action="{{route('type-kamar-search') }}" method="get">
+                                                    @csrf
+                                                    <div class="input-group-append">
+                                                        <input type="text" class="form-control float-right" name="jenis" placeholder="Search room type.." value="">
+                                                        <button type="submit" class="btn btn-secondary">
+                                                            <i class="fas fa-search"></i>
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </h3>
 
-                                <div class="card-tools">
-                                    <div class="input-group input-group-sm" style="width: 250px;">
-                                        <form action="{{route('type-kamar-search') }}" method="get">
-                                            @csrf
-                                            <div class="input-group-append">
-                                                <input type="text" class="form-control float-right" name="jenis" placeholder="Cari type Kamar.." value="">
-                                                <button type="submit" class="btn btn-default">
-                                                    <i class="fas fa-search"></i>
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body table-responsive p-0" style="height: 300px;">
-                                <table class="table table-head-fixed table table-hover text-nowrap">
+                                <table class="table table-head-fixed table table-hover text-nowrap m-2">
                                     <thead>
-                                        <tr class="table-danger">
-                                            <th scope="col">Jenis</th>
-                                            <th scope="col">Harga / malam</th>
-                                            <th scope="col">Harga / orang</th>
-                                            <th style="width: 100px;">Keterangan</th>
+                                        <tr class="table">
+                                            <th scope="col">Type</th>
+                                            <th scope="col">Price / night</th>
+                                            <th scope="col">Charge / guest</th>
+                                            <th style="width: 100px;">Description</th>
                                             <th></th>
                                         </tr>
                                     </thead>
@@ -85,7 +96,7 @@
                                             </td>
                                         </tr>
                                         @empty
-                                        <td colspan="6" class="text-center">Tidak ada data...</td>
+                                        <td colspan="6" class="text-center">No data...</td>
                                         @endforelse
                                     </tbody>
                                 </table>
@@ -100,6 +111,6 @@
 
 </div>
 
-@include('layouts.footer')
+
 
 @endsection
