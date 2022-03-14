@@ -32,8 +32,12 @@
     <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
 
     <div class="col-md-6">
-        <input id="role" type="role" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role">
-
+        <select id="role" name="role" class="custom-select @error('role') is-invalid @enderror" value="{{old('role')}}">
+            <option value="">-Select role-</option>
+            <option value="manager">Manager</option>
+            <option value="receptionist">Receptionist</option>
+            <option value="HK">House Keeping</option>
+        </select>
         @error('role')
         <span class="invalid-feedback" role="alert">
             <strong>{{ $message }}</strong>
