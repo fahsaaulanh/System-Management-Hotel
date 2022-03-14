@@ -12,8 +12,8 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="/home">Home</a></li>
-                        <li class="breadcrumb-item"><a href="/kamar">Mnagement Kamar</a></li>
-                        <li class="breadcrumb-item active">Tambah kamar</li>
+                        <li class="breadcrumb-item"><a href="/kamar">Room Management</a></li>
+                        <li class="breadcrumb-item active">Add Room</li>
                     </ol>
                 </div>
             </div>
@@ -25,9 +25,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="card">
+                    <div class="card shadow">
                         <div class="card-header">
-                            <h4>Tambah Kamar</h3>
+                            <h4>Add Room</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -36,18 +36,18 @@
                                 <div class="row">
 
                                     <div class="col-6">
-                                        <label for="id_type_kamar">Type Kamar</label>
+                                        <label for="type_kamar_id">Room Type</label>
                                         <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control  @error('id_type_kamar') is-invalid @enderror" value="{{ app('request')->input('jenis') ?? ''}}" disabled>
-                                            <input type="hidden" class="" name="id_type_kamar" value="{{ app('request')->input('id_type_kamar') ?? ''}}">
+                                            <input type="text" class="form-control  @error('type_kamar_id') is-invalid @enderror" value="{{ app('request')->input('jenis') ?? ''}}" disabled>
+                                            <input type="hidden" class="" name="type_kamar_id" value="{{ app('request')->input('type_kamar_id') ?? ''}}">
                                             <span class="input-group-append">
-                                                <a type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-xl">cari</a>
+                                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-xl">Search</button>
                                             </span>
                                         </div>
                                     </div>
                                     @include('kamar.form')
-                                    <button type="submit" class="btn btn-outline-success mb-2">Daftar</button>
-                                    <a href="{{url('/kmaar') }}" class=" btn btn-outline-danger mb-2">Cancel</a>
+                                    <button type="submit" class="btn btn-info m-2">Add</button>
+                                    <a href="{{url('/kamar') }}" class=" btn btn-danger m-2">Cancel</a>
                             </form>
                         </div>
                     </div>
@@ -59,6 +59,6 @@
 </div>
 
 
-@include('layouts.footer')
+
 
 @endsection

@@ -15,10 +15,11 @@ class CreateLayanansTable extends Migration
     {
         Schema::create('layanans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_jenis_layanan')->unsigned();
+            $table->bigInteger('jenis_layanan_id')->unsigned();
+            $table->string('layanan');
             $table->integer('harga');
             $table->string('satuan');
-            $table->foreign('id_jenis_layanan')->references('id')->on('jenis_layanans');
+            $table->foreign('jenis_layanan_id')->references('id')->on('jenis_layanans');
             $table->timestamps();
         });
     }

@@ -18,6 +18,7 @@ class CreateTamusTable extends Migration
             $table->string('nama');
             $table->string('jk');
             $table->integer('usia');
+            $table->string('jenis_identitas');
             $table->string('no_ktp');
             $table->string('wn');
             $table->string('alamat');

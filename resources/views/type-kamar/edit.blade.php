@@ -8,14 +8,14 @@
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
-                <div class="col-sm-6">
+                <div class="col-sm-4">
 
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-8">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="/home">Home</a></li>
-                        <li class="breadcrumb-item "><a href="/type-kamar">Management Type kamar</a></li>
-                        <li class="breadcrumb-item active">Edit Type Kamar</li>
+                        <li class="breadcrumb-item "><a href="/type-kamar">Room Type Management</a></li>
+                        <li class="breadcrumb-item active">Edit Room Type</li>
 
                     </ol>
                 </div>
@@ -27,17 +27,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="card">
+                        <div class="card shadow">
                             <div class="card-header">
-                                <h4>Edit Type Kamar</h4>
+                                <h4>Edit Room Type</h4>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <form action="{{ route('type-kamar.update', ['type_kamar' => $typeKamar->id ]) }}" method="post">
                                     @method('PATCH')
                                     @include('type-kamar.form')
-                                    <button type="submit" class="btn btn-outline-success mb-2">Update</button>
-                                    <a href="{{url('/type-kamar') }}" class="btn btn-outline-danger mb-2" href=" {{url('/type-kamar') }} ">Cancel</a>
+                                    <button type="submit" class="btn btn-info m-2">Update</button>
+                                    <a href="{{url('/type-kamar') }}" class="btn btn-danger m-2" href=" {{url('/type-kamar') }} ">Cancel</a>
                                 </form>
                             </div>
                         </div>
@@ -49,6 +49,6 @@
     </div>
 
 
-    @include('layouts.footer')
+
 
     @endsection

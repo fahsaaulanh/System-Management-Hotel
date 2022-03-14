@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Checkin;
 use App\Models\Tamu;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class TamuController extends Controller
 {
@@ -15,6 +17,7 @@ class TamuController extends Controller
     public function index()
     {
         $tamus = Tamu::all();
+
         return view('tamu.index', compact('tamus'));
     }
 
@@ -41,6 +44,7 @@ class TamuController extends Controller
             'nama' => 'required',
             'jk' => 'required',
             'usia' => 'required|integer',
+            'jenis_identitas' => 'required',
             'no_ktp' => 'required',
             'wn' => 'required',
             'alamat' => 'required',
@@ -48,8 +52,9 @@ class TamuController extends Controller
         ]);
 
         Tamu::create($validateData);
+        Alert::success('Sukses', "Data " . $request->nama . " berhasil ditambahkan!");
 
-        return redirect('/tamu')->with('success', 'Profile updated!');;
+        return redirect('/tamu');
     }
 
     /**
@@ -88,6 +93,7 @@ class TamuController extends Controller
             'nama' => 'required',
             'jk' => 'required',
             'usia' => 'required|integer',
+            'jenis_identitas' => 'required',
             'no_ktp' => 'required',
             'wn' => 'required',
             'alamat' => 'required',
@@ -95,6 +101,8 @@ class TamuController extends Controller
         ]);
 
         $tamu->update($validateData);
+
+        Alert::success('Sukses', "Data " . $request->nama . " berhasil diupdate!");
 
         return redirect('/tamu')->with('pesan', "Tamu $request->nama berhasil update");
     }
@@ -107,7 +115,16 @@ class TamuController extends Controller
      */
     public function destroy(Tamu $tamu)
     {
-        $tamu->delete();
+        $checkins = Checkin::where('tamu_id', '=', $tamu->id)->count();
+
+
+        if ($checkins == 0) {
+            $tamu->delete();
+            Alert::succes('Sukses', "Data " . $tamu->nama . " berhasil dihapus!");
+        } else {
+            Alert::error('Gagal', "Data " . $tamu->nama . " tidak dapat dihapus!");
+        }
+
         return redirect('tamu');
     }
 
@@ -116,6 +133,11 @@ class TamuController extends Controller
         $tamus = Tamu::where('nama', 'LIKE', '%' . $request->nama . '%')
             ->orderBy('nama', 'asc')
             ->get();
+        $jumlah = Tamu::where('nama', 'LIKE', '%' . $request->nama . '%')->count();
+
+        if ($jumlah < 1) {
+            Alert::info('Tidak ada data', "Data " . $request->nama . " tidak ditemukan!");
+        }
 
         return view('tamu.index', compact('tamus'));
     }

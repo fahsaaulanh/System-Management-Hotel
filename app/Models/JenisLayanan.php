@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class JenisLayanan extends Model
 {
     use HasFactory;
-    protected $guest = [];
+    protected $guarded = [];
 }

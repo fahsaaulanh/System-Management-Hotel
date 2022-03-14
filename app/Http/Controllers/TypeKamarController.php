@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kamar;
 use App\Models\TypeKamar;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class TypeKamarController extends Controller
 {
@@ -44,6 +46,8 @@ class TypeKamarController extends Controller
         ]);
 
         TypeKamar::create($validateData);
+        Alert::success("Successfully", "Type Kamar " . $request->jenis . " berhasil ditambahkan!");
+
         return redirect('/type-kamar');
     }
 
@@ -86,6 +90,9 @@ class TypeKamarController extends Controller
         ]);
 
         $typeKamar->update($validateData);
+
+        Alert::success("Yeay!", "Kamar " . $request->jenis . " berhasil diupdate!");
+
         return redirect('/type-kamar');
     }
 
@@ -97,7 +104,15 @@ class TypeKamarController extends Controller
      */
     public function destroy(TypeKamar $typeKamar)
     {
-        $typeKamar->delete();
+        $kamars = Kamar::where('type_kamar_id', '=', $typeKamar->id)->count();
+
+
+        if ($kamars == 0) {
+            $typeKamar->delete();
+            Alert::success('Sukses', "Type kamar " . $typeKamar->jenis . " berhasil dihapus!");
+        } else {
+            Alert::error('Gagal', "Type kamar " . $typeKamar->jenis . " tidak dapat dihapus!");
+        }
         return redirect('/type-kamar');
     }
 
@@ -106,6 +121,12 @@ class TypeKamarController extends Controller
         $type_kamars = TypeKamar::where('jenis', 'LIKE', '%' . $request->jenis . '%')
             ->orderBy('jenis', 'asc')
             ->get();
+
+        $jumlah = TypeKamar::where('jenis', 'LIKE', '%' . $request->jenis . '%')->count();
+
+        if ($jumlah < 1) {
+            Alert::info("Tidak ada data :'( ", "Kamar " . $request->jenis . " tidak ditemukan!");
+        }
 
         return view('type-kamar.index', compact('type_kamars'));
     }

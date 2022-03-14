@@ -12,12 +12,12 @@
 
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="">Management Kamar</h1>
+                        <h4 class="">Room Management</h4>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="/home">Home</a></li>
-                            <li class="breadcrumb-item active">Management Kamar</li>
+                            <li class="breadcrumb-item active">Room Management</li>
                         </ol>
                     </div>
                 </div>
@@ -29,37 +29,46 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <div class="card">
+                        <div class="card shadow">
                             <div class="card card-danger card-outline">
                                 <div class="card-header">
-                                    <a type="button" class="btn btn-outline-info" href="{{route('kamar.create')}}">
-                                        <i class="fa fa-plus"></i>
-                                        Tambah Kamar
-                                    </a>
-
-
-                                    <div class="card-tools">
-                                        <div class="input-group input-group-sm" style="width: 250px;">
-                                            <form action="{{route('kamar-search') }}" method="get">
-                                                @csrf
-                                                <div class="input-group-append">
-                                                    <input type="text" class="form-control float-right" name="no_kamar" placeholder="Cari nomor kamar.." value="">
-                                                    <button type="submit" class="btn btn-default">
-                                                        <i class="fas fa-search"></i>
-                                                    </button>
-                                                </div>
-                                            </form>
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <a type="button" class="btn btn-info" href="{{route('kamar.create')}}">
+                                                <i class="fa fa-plus"></i>
+                                                Add Room
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a class="btn btn-danger " href="/laporan/kamar/download">
+                                                <i class="fas fa-file-pdf"> </i> Download
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="input-group input-group-sm float-right" style="width: 250px;">
+                                                <form action="{{route('kamar-search') }}" method="get">
+                                                    @csrf
+                                                    <div class="input-group-append">
+                                                        <input type="text" class="form-control float-right" name="no_kamar" placeholder="Search no room.." value="">
+                                                        <button type="submit" class="btn btn-secondary">
+                                                            <i class="fas fa-search"></i>
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
+
+
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body table-responsive p-0" style="height: 300px;">
-                                    <table class="table table-head-fixed table table-hover text-nowrap">
+                                    <table class="table table-head-fixed table table-hover text-nowrap m-2">
                                         <thead>
-                                            <tr class="table-danger">
-                                                <th scope="col">No Kamar</th>
+                                            <tr class="table">
+                                                <th scope="col">No Room</th>
                                                 <th scope="col">Type</th>
-                                                <th scope="col">Max Orang</th>
+                                                <th scope="col">Max Guest</th>
                                                 <th style="width: 100px;">Status</th>
                                                 <th></th>
                                             </tr>
@@ -70,7 +79,15 @@
                                                 <td>{{ $kamar->no_kamar}}</td>
                                                 <td>{{ $kamar->jenis}}</td>
                                                 <td>{{ $kamar->max}}</td>
-                                                <td>{{ $kamar->status}} </td>
+                                                <td>
+                                                    @if ( $kamar->status == 'Vacant')
+                                                    <div class="badge badge-success">{{ $kamar->status}}</div>
+                                                    @elseif ( $kamar->status == 'Occupied')
+                                                    <div class="badge badge-danger">{{ $kamar->status}}</div>
+                                                    @else
+                                                    <div class="badge badge-warning">- {{ $kamar->status}} -</div>
+                                                    @endif
+                                                </td>
                                                 <td>
                                                     <div class="row">
                                                         <div class="col-6">
@@ -87,7 +104,7 @@
                                                 </td>
                                             </tr>
                                             @empty
-                                            <td colspan="6" class="text-center">Tidak ada data...</td>
+                                            <td colspan="6" class="text-center">No data...</td>
                                             @endforelse
                                         </tbody>
                                     </table>
@@ -109,6 +126,6 @@
 
 
 
-@include('layouts.footer')
+
 
 @endsection

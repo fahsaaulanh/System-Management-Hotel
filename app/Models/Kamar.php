@@ -9,4 +9,9 @@ class Kamar extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public function TypeKamar()
+    {
+        return $this->belongsTo(TypeKamar::class);
+    }
 }

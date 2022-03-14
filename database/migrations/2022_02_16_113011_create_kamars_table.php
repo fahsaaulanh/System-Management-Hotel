@@ -16,10 +16,10 @@ class CreateKamarsTable extends Migration
         Schema::create('kamars', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('no_kamar')->unique();
-            $table->bigInteger('id_type_kamar')->unsigned();
+            $table->bigInteger('type_kamar_id')->unsigned();
             $table->integer('max');
             $table->string('status');
-            $table->foreign('id_type_kamar')->references('id')->on('type_kamars');
+            $table->foreign('type_kamar_id')->references('id')->on('type_kamars');
             $table->timestamps();
         });
     }

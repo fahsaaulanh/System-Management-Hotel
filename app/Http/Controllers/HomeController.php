@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kamar;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,7 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $kamar_tersedia = Kamar::where('status', '=', 'Vacant')->count();
+        $kamar_terpakai = Kamar::where('status', '=', 'Occupied')->count();
+        $kamar_kotor = Kamar::where('status', '=', 'Dirty')->count();
+
+        return view('home', compact('kamar_tersedia', 'kamar_terpakai', 'kamar_kotor'));
     }
 
     public function checkin()
