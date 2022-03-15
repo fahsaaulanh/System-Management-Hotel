@@ -12,6 +12,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
 
+    <link href="{{url('assets/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
     <!-- Vendor CSS Files -->
     <link href="{{ asset('/vendor/aos/aos.css')}}" rel="stylesheet">
     <link href="{{ asset('/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
@@ -36,7 +37,7 @@
         <div class="container d-flex justify-content-between align-items-center">
 
             <div id="logo">
-                <h1><a href="#">InSitu Hotel</a></h1>
+                <h1><a href="#"><i class="fas fa-hotel"></i>InSitu Hotel</a></h1>
             </div>
 
             <!-- Navbar -->
@@ -64,22 +65,17 @@
         <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
             @if (Route::has('login'))
             @auth
-            <h1>Selamat Datang kembali {{ Auth::user()->name }}</h1>
+            <h1>Selamat Datang kembali {{ Auth::user()->username }}</h1>
             <h2>Klik tombol dibawah ini untuk kembali ke dashboard</h2>
             <a href="{{ url('/home') }}" class="btn-get-started">Dashboard</a>
             @else
             <h1>Selamat Datang di InSitu Hotel</h1>
-            <h2>Segera bergabung untuk membantu mengatur administrasi hotel kami</h2>
+            <h2>Segera bergabung untuk mengatur administrasi hotel kami</h2>
             <a href="{{ route('login') }}" class="btn-get-started">Bergabung</a>
             @endauth
             @endif
         </div>
     </section>
-
-    <!-- Main Content -->
-    <main id="main">
-
-    </main>
 
     <!-- Footer -->
     <footer id="footer">

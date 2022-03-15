@@ -33,10 +33,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-4">
                                     <i class="fas fa-bed fa-4x text-info"></i>
                                 </div>
-                                <div class=" row">
+                                <div class="row">
                                     <div class="col-12 ">
                                         <a href="{{ url('/checkin') }}" class="btn btn-outline-info float-center">
                                             View Room <i class="fas fa-arrow-circle-right"></i>
@@ -62,7 +62,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-4">
                                     <i class="fas fa-bed fa-4x text-danger"></i>
                                 </div>
                                 <div class="row">
@@ -91,7 +91,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-4">
                                     <i class="fas fa-bed fa-4x text-success"></i>
                                 </div>
                                 <div class="row">

@@ -37,7 +37,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-4">
                                     <i class="fas fa-bed fa-4x text-secondary"></i>
                                 </div>
                                 <div class="row">
