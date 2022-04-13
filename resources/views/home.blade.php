@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('custom_css')
+<link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+@endsection
+
 @section('content')
 <!-- Content Wrapper (Page Content) -->
 <div class="content-wrapper">
@@ -20,7 +24,7 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- Kamar tersedia -->
-                <div class="col-4 mb-4">
+                <!-- <div class="col-4 mb-4">
                     <div class="card border-left-info shadow h-100 py-2">
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
@@ -46,10 +50,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- kamar terpakai -->
-                <div class="col-4 mb-4">
+                <!-- <div class="col-4 mb-4">
                     <div class="card border-left-danger shadow h-100 py-2">
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
@@ -75,33 +79,71 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Kamar kotor -->
-                <div class="col-4 mb-4">
-                    <div class="card border-left-success shadow h-100 py-2">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                    <div class="h3 font-weight-bold text-success text-uppercase mb-1">{{$kamar_kotor}}
-                                    </div>
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col-auto">
-                                            <div class="text-xs mb-0 mr-3 font-weight-bold text-gray-800">Dirty</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <i class="fas fa-bed fa-4x text-success"></i>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 ">
-                                        <a href="" class="btn btn-outline-success float-center">
-                                            View Room <i class="fas fa-arrow-circle-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
+                <div class="col-3 mb-4">
+                    <div class="swiper-slide card-custom">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="{{ asset('img/img1.jpg') }}" alt="">
                             </div>
+
+
+                            <div class="name-profession">
+                                <span class="name">Vacant Room</span>
+                                <span class="profession"></span>
+                            </div>
+
+
+
+                            <a href="/checkin" class="button">
+                                <button class="hireMe">View Room</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3 mb-4">
+                    <div class="swiper-slide card-custom">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="{{ asset('img/img2.jpg') }}" alt="">
+                            </div>
+
+
+                            <div class="name-profession">
+                                <span class="name">Occupied Room</span>
+                                <span class="profession"></span>
+                            </div>
+
+
+
+                            <a href="/checkout" class="button">
+                                <button class="hireMe">View Room</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3 mb-4">
+                    <div class="swiper-slide card-custom">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="{{ asset('img/img3.jpg') }}" alt="">
+                            </div>
+
+
+                            <div class="name-profession">
+                                <span class="name">Dirty Room</span>
+                                <span class="profession"></span>
+                            </div>
+
+
+
+                            <a href="/cleanup" class="button">
+                                <button class="hireMe">View Room</button>
+                            </a>
                         </div>
                     </div>
                 </div>

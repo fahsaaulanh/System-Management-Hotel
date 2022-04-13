@@ -1,0 +1,154 @@
+/* === Google Font Import - Poppins === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+
+--purple : #e468c3;
+--success : #68e472;
+--warning : #fff566;
+--dark : #343534 !important;
+--light : #8c8c8c !important;
+--gradient : linear-gradient(135deg, var(--dark), var(--light));
+--gradient-hover : linear-gradient(135deg, var(--light), var(--dark));
+--gradient-success : linear-gradient(135deg, var(--success), var(--light));
+
+}
+
+
+section{
+position: relative;
+height: 450px;
+width: 1075px;
+display: flex;
+align-items: center;
+}
+
+.swiper{
+  width: 950px;
+}
+
+.card-custom{
+  position: relative;
+  background: #fff;
+  border-radius: 5%;
+  margin: 20px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-custom::before{
+  content: "";
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  background: var(--gradient);
+  border-radius: 5% 5% 0 0;
+}
+
+.card-custom .card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  z-index: 100;
+}
+
+section .card-custom .image{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  padding: 3px;
+  background: var(--gradient);
+}
+
+section .card-custom .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.card-custom .media-icons{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-custom .media-icons i{
+  color: #fff;
+  opacity: 0.6;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card-custom .media-icons i:hover{
+  opacity: 1;
+}
+
+.card-custom .name-profession{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  color: ;
+}
+
+.name-profession .name{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.name-profession .profession{
+  font-size:15px;
+  font-weight: 500;
+}
+
+
+.card-custom .button{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.card-custom .button button{
+  background: var(--gradient);
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: 5%;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button button:hover{
+  background: #565557;
+}
+
+.swiper-pagination{
+  position: absolute;
+}
+
+.swiper-pagination-bullet{
+  height: 7px;
+  width: 26px;
+  border-radius: 25px;
+  background: var(--gradient);
+}
+
+.swiper-button-next, .swiper-button-prev{
+  opacity: 0.7;
+  color: var(--gradient);
+  transition: all 0.3s ease;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover{
+  opacity: 1;
+  color: var(--gradient);
+}

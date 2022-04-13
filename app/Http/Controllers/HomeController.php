@@ -28,6 +28,7 @@ class HomeController extends Controller
         $kamar_terpakai = Kamar::where('status', '=', 'Occupied')->count();
         $kamar_kotor = Kamar::where('status', '=', 'Dirty')->count();
 
+        Alert('Selamat datang!');
         return view('home', compact('kamar_tersedia', 'kamar_terpakai', 'kamar_kotor'));
     }
 
