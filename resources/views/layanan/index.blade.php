@@ -37,13 +37,13 @@
                                 <div class="card-header">
                                     <div class="row">
                                         <div class="col-2">
-                                            <a type="button" class="btn btn-info" href="{{route('layanan.create')}}">
+                                            <a type="button" class="btn btn-pink" href="{{route('layanan.create')}}">
                                                 <i class="fa fa-plus"></i>
                                                 Add Service
                                             </a>
                                         </div>
                                         <div class="col-4">
-                                            <a class="btn btn-danger " href="/laporan/layanan/download">
+                                            <a class="btn btn-purple-light " href="/laporan/layanan/download">
                                                 <i class="fas fa-file-pdf"> </i> Download
                                             </a>
                                         </div>
@@ -53,7 +53,7 @@
                                                     @csrf
                                                     <div class="input-group-append">
                                                         <input type="text" class="form-control float-right" name="layanan" placeholder="Search service.." value="">
-                                                        <button type="submit" class="btn btn-secondary">
+                                                        <button type="submit" class="btn btn-purple">
                                                             <i class="fas fa-search"></i>
                                                         </button>
                                                     </div>
@@ -83,13 +83,13 @@
                                                 <td>
                                                     <div class="row">
                                                         <div class="col-6">
-                                                            <a class="btn btn-outline-success" href="{{route('layanan.edit', ['layanan'=>$layanan->id])}}"><i class="fa fa-pencil"></i> Edit</a>
+                                                            <a class="btn btn-green" href="{{route('layanan.edit', ['layanan'=>$layanan->id])}}"><i class="fa fa-pencil"></i></a>
                                                         </div>
                                                         <div class="col-6">
                                                             <form action="{{route('layanan.destroy',['layanan'=>$layanan->id])}}" method="post">
                                                                 @method('DELETE')
                                                                 @csrf
-                                                                <button type="submit" href="#" class=" btn btn-outline-danger"><i class="fa fa-trash"></i></button>
+                                                                <button type="submit" href="#" class=" btn btn-red"><i class="fa fa-trash"></i></button>
                                                             </form>
 
                                                         </div>

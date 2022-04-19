@@ -42,13 +42,13 @@
                                             <input type="text" class="form-control  @error('jenis_layanan_id') is-invalid @enderror" value="{{ app('request')->input('kategori') ?? $layanan->kategori }}" disabled>
                                             <input type="hidden" class="" name="jenis_layanan_id" value="{{ app('request')->input('jenis_layanan_id') ?? $layanan->jenis_layanan_id }}">
                                             <span class="input-group-append">
-                                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-xl">Search</button>
+                                                <button type="button" class="btn btn-orange" data-toggle="modal" data-target="#modal-xl">Search</button>
                                             </span>
                                         </div>
                                     </div>
                                     @include('layanan.form')
-                                    <button type="submit" class="btn btn-success m-2">Update</button>
-                                    <a href="{{url('/layanan') }}" class="btn btn-danger m-2" href=" {{url('/layanan') }} ">Cancel</a>
+                                    <button type="submit" class="btn btn-purple float-right m-2">Update</button>
+                                    <a href="{{url('/layanan') }}" class="btn btn-red float-right m-2" href=" {{url('/layanan') }} ">Cancel</a>
                                 </form>
                             </div>
                         </div>

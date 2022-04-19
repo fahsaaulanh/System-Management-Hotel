@@ -27,7 +27,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="card">
+                        <div class="card shadow">
                             <div class="card-header">
                                 <h4>Update Room Type</h4>
                             </div>
@@ -36,8 +36,8 @@
                                 <form action="{{ route('jenis-layanan.update', ['jenis_layanan' => $jenisLayanan->id ]) }}" method="post">
                                     @method('PATCH')
                                     @include('jenis-layanan.form')
-                                    <button type="submit" class="btn btn-success m-2">Update</button>
-                                    <a href="{{url('/jenis-layanan') }}" class="btn btn-danger m-2" href=" {{url('/jenis-layanan') }} ">Cancel</a>
+                                    <button type="submit" class="btn btn-purple float-right m-2">Update</button>
+                                    <a href="{{url('/jenis-layanan') }}" class="btn btn-red float-right m-2" href=" {{url('/jenis-layanan') }} ">Cancel</a>
                                 </form>
                             </div>
                         </div>

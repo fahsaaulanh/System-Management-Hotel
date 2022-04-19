@@ -27,7 +27,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="card">
+                    <div class="card shadow">
                         <div class="card-header">
                             <h4>Guest Registration</h3>
                         </div>
@@ -35,8 +35,8 @@
                         <div class="card-body">
                             <form action="{{ route('tamu.store') }}" method="post">
                                 @include('tamu.form')
-                                <button type="submit" class="btn btn-success m-2 float-right form-group">Submit</button>
-                                <a href="{{url('/tamu') }}" class=" btn btn-danger m-2 float-right form-group">Cancel</a>
+                                <button type="submit" class="btn btn-purple-light m-2 float-right form-group">Submit</button>
+                                <a href="{{url('/tamu') }}" class=" btn btn-red m-2 float-right form-group">Cancel</a>
                             </form>
                         </div>
                     </div>

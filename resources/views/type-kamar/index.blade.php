@@ -26,30 +26,30 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12">
+                <div class="col-sm-12">
                     <div class="card shadow">
                         <div class="card card-danger card-outline">
                             <div class="card-header">
                                 <h3 class="card-title">
                                     <div class="row">
-                                        <div class="col-3">
-                                            <a href="{{ route('type-kamar.create') }}" class="btn btn-info">
+                                        <div class="col-sm-3 mb-2">
+                                            <a href="{{ route('type-kamar.create') }}" class="btn btn-pink text-white">
                                                 <i class="fa fa-plus"></i>
                                                 Add Room Type
                                             </a>
                                         </div>
-                                        <div class="col-3">
-                                            <a class="btn btn-danger " href="/laporan/type-kamar/download">
+                                        <div class="col-sm-3 mb-2">
+                                            <a class="btn btn-purple-light " href="/laporan/type-kamar/download">
                                                 <i class="fas fa-file-pdf"> </i> Download
                                             </a>
                                         </div>
-                                        <div class="col-6">
-                                            <div class="input-group input-group-sm float-right" style="width: 250px;">
+                                        <div class="col-sm-6">
+                                            <div class="input-group input-group-sm float-sm-right" style="width: 200px;">
                                                 <form action="{{route('type-kamar-search') }}" method="get">
                                                     @csrf
                                                     <div class="input-group-append">
                                                         <input type="text" class="form-control float-right" name="jenis" placeholder="Search room type.." value="">
-                                                        <button type="submit" class="btn btn-secondary">
+                                                        <button type="submit" class="btn btn-purple">
                                                             <i class="fas fa-search"></i>
                                                         </button>
                                                     </div>
@@ -66,9 +66,9 @@
                                 <table class="table table-head-fixed table table-hover text-nowrap m-2">
                                     <thead>
                                         <tr class="table">
-                                            <th scope="col">Type</th>
-                                            <th scope="col">Price / night</th>
-                                            <th scope="col">Charge / guest</th>
+                                            <th scope="col-sm">Type</th>
+                                            <th scope="col-sm">Price / night</th>
+                                            <th scope="col-sm">Charge / guest</th>
                                             <th style="width: 100px;">Description</th>
                                             <th></th>
                                         </tr>
@@ -76,27 +76,27 @@
                                     <tbody>
                                         @forelse ($type_kamars as $typeKamar)
                                         <tr class=" table-hover">
-                                            <td><a href="{{url('/typeKamar/'.$typeKamar->id ) }} ">{{ $typeKamar->jenis}}</a> </td>
+                                            <td><a>{{ $typeKamar->jenis}}</a> </td>
                                             <td>{{ $typeKamar->harga}}</td>
                                             <td>{{ $typeKamar->denda}}</td>
                                             <td>{{ $typeKamar->keterangan}} </td>
                                             <td>
                                                 <div class="row">
-                                                    <div class="col-6">
-                                                        <a href="{{ url('/type-kamar/'.$typeKamar->id. '/edit') }}" class="btn btn-outline-success"><i class="fa fa-pencil"></i> Edit</a>
+                                                    <div class="col-sm-6">
+                                                        <a href="{{ url('/type-kamar/'.$typeKamar->id. '/edit') }}" class="btn btn-green"><i class="fa fa-pencil"></i></a>
                                                     </div>
-                                                    <div class="col-6">
+                                                    <div class="col-sm-6">
                                                         <form action="{{route('type-kamar.destroy', ['type_kamar'=> $typeKamar->id]) }}" method="post">
                                                             @method('DELETE')
                                                             @csrf
-                                                            <button type="button " href="{{ url('/type-kamar/'.$typeKamar->id. '/edit') }}" class="btn btn-outline-danger"><i class="fa fa-trash"></i></button>
+                                                            <button type="button " href="{{ url('/type-kamar/'.$typeKamar->id. '/edit') }}" class="btn btn-red"><i class="fa fa-trash"></i></button>
                                                         </form>
                                                     </div>
                                                 </div>
                                             </td>
                                         </tr>
                                         @empty
-                                        <td colspan="6" class="text-center">No data...</td>
+                                        <td col-smspan="6" class="text-center">No data...</td>
                                         @endforelse
                                     </tbody>
                                 </table>

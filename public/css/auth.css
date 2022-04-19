@@ -1,3 +1,8 @@
+:root{
+    --purple: #9561e2;
+    --purple-light: #d26ec8;
+    --gradient : linear-gradient(135deg, var(--purple), var(--purple-light));
+}
 
 .hero-form-container {
     position: absolute;
@@ -119,7 +124,7 @@
 .form-horizontal .checkbox:focus{ outline: none; }
 .form-horizontal .signup{
     color: #fff;
-    background-color: #292E31;
+    background-color: var(--purple);
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -133,5 +138,5 @@
 }
 .form-horizontal .signup:hover,
 .form-horizontal .signup:focus{
-    background-color: #484b4d;
+    background-color: var(--purple-light);
 }

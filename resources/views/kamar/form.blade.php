@@ -1,4 +1,4 @@
-<div class="col-6">
+<div class="col-sm-6">
     <div class="form-group">
         <label for="no_kamar">No Room</label>
         <input type="text" name="no_kamar" placeholder="Input no room ..." class="form-control @error('no_kamar') is-invalid @enderror" id="no_kamar" value="{{ $kamar->no_kamar ?? '' }}">
@@ -12,7 +12,7 @@
 
 <div class="row">
 
-    <div class="col-6">
+    <div class="col-sm-6">
         <div class="form-group">
             <label for="max">Max Capacity</label>
             <input type="text" name="max" placeholder="Input max capacity" class="form-control @error('max') is-invalid @enderror" id="max" n value="{{ $kamar->max ?? '' }}">
@@ -23,7 +23,7 @@
     </div>
 
 
-    <div class="col-6">
+    <div class="col-sm-6">
         <div class="form-group">
             <label for="status">Status</label>
             <select id="status" name="status" class="custom-select @error('status') is-invalid @enderror" value="{{$kamar->status ?? ''}}">

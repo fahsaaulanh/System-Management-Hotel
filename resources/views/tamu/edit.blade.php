@@ -26,7 +26,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="card">
+                        <div class="card shadow">
                             <div class="card-header">
                                 <h4>Edit Guest Data</h4>
                             </div>
@@ -35,8 +35,8 @@
                                 <form action="{{ route('tamu.update', ['tamu' => $tamu->id ]) }}" method="post">
                                     @method('PATCH')
                                     @include('tamu.form')
-                                    <button type="submit" class="btn btn-success m-2 float-right">Update</button>
-                                    <a href="{{url('/tamu') }}" class="btn btn-danger m-2 float-right" href=" {{url('/tamu') }} ">Cancel</a>
+                                    <button type="submit" class="btn btn-purple m-2 float-right">Update</button>
+                                    <a href="{{url('/tamu') }}" class="btn btn-red m-2 float-right" href=" {{url('/tamu') }} ">Cancel</a>
                                 </form>
                             </div>
                         </div>

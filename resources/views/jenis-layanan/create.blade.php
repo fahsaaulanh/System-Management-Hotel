@@ -36,8 +36,8 @@
                         <div class="card-body">
                             <form action="{{ route('jenis-layanan.store') }}" method="post">
                                 @include('jenis-layanan.form')
-                                <button type="submit" class="btn btn-info m-2 float-right">Add</button>
-                                <a href="{{url('/jenis-layanan') }}" class=" btn btn-danger m-2 float-right">Cancel</a>
+                                <button type="submit" class="btn btn-purple-light m-2 float-right">Add</button>
+                                <a href="{{url('/jenis-layanan') }}" class=" btn btn-red m-2 float-right">Cancel</a>
                             </form>
                         </div>
                     </div>

@@ -36,8 +36,8 @@
                         <div class="card-body">
                             <form action="{{ route('type-kamar.store') }}" method="post">
                                 @include('type-kamar.form')
-                                <button type="submit" class="btn btn-success m-2">Add</button>
-                                <a href="{{url('/type-kamar') }}" class=" btn btn-danger m-2">Cancel</a>
+                                <button type="submit" class="btn btn-purple-light m-2 float-right">Add</button>
+                                <a href="{{url('/type-kamar') }}" class=" btn btn-red m-2 float-right">Cancel</a>
                             </form>
                         </div>
                     </div>

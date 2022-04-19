@@ -24,6 +24,8 @@
     <!-- Custom styles for this page -->
     @yield('custom_css')
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom-color.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom-btn.css') }}" rel="stylesheet">
     <link href="{{url('assets/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
 
@@ -34,10 +36,11 @@
     @include('sweetalert::alert')
 
     <!-- Page Wrapper -->
+    <div id="page-top"></div>
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-indigo sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">

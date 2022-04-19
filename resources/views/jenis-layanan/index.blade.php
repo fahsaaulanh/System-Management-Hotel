@@ -33,13 +33,13 @@
                                 <h3 class="card-title">
                                     <div class="row">
                                         <div class="col-3">
-                                            <a href="{{ route('jenis-layanan.create') }}" class="btn btn-info">
+                                            <a href="{{ route('jenis-layanan.create') }}" class="btn btn-pink">
                                                 <i class="fa fa-plus"></i>
                                                 Add Room Type
                                             </a>
                                         </div>
                                         <div class="col-3">
-                                            <a class="btn btn-danger " href="/laporan/jenis-layanan/download">
+                                            <a class="btn btn-purple-light " href="/laporan/jenis-layanan/download">
                                                 <i class="fas fa-file-pdf"> </i> Download
                                             </a>
                                         </div>
@@ -49,7 +49,7 @@
                                                     @csrf
                                                     <div class="input-group-append">
                                                         <input type="text" class="form-control float-right" name="kategori" placeholder="Search room type.." value="">
-                                                        <button type="submit" class="btn btn-secondary">
+                                                        <button type="submit" class="btn btn-purple">
                                                             <i class="fas fa-search"></i>
                                                         </button>
                                                     </div>
@@ -81,13 +81,13 @@
                                             <td>
                                                 <div class="row ">
                                                     <div class="col-4">
-                                                        <a href="{{ url('/jenis-layanan/'.$jenis_layanan->id. '/edit') }}" class="btn btn-outline-success"><i class="fa fa-pencil"></i> Edit</a>
+                                                        <a href="{{ url('/jenis-layanan/'.$jenis_layanan->id. '/edit') }}" class="btn btn-green"><i class="fa fa-pencil"></i></a>
                                                     </div>
                                                     <div class="col-6">
                                                         <form action="{{route('jenis-layanan.destroy', ['jenis_layanan'=> $jenis_layanan->id]) }}" method="post">
                                                             @method('DELETE')
                                                             @csrf
-                                                            <button type="button " href="{{ url('/jenis-layanan/'.$jenis_layanan->id. '/edit') }}" class="btn btn-outline-danger"><i class="fa fa-trash"></i></button>
+                                                            <button type="button " href="{{ url('/jenis-layanan/'.$jenis_layanan->id. '/edit') }}" class="btn btn-red"><i class="fa fa-trash"></i></button>
                                                         </form>
                                                     </div>
                                                 </div>

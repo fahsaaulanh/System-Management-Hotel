@@ -36,8 +36,8 @@
                                 <form action="{{ route('type-kamar.update', ['type_kamar' => $typeKamar->id ]) }}" method="post">
                                     @method('PATCH')
                                     @include('type-kamar.form')
-                                    <button type="submit" class="btn btn-info m-2">Update</button>
-                                    <a href="{{url('/type-kamar') }}" class="btn btn-danger m-2" href=" {{url('/type-kamar') }} ">Cancel</a>
+                                    <button type="submit" class="btn btn-purple text-white m-2 float-right">Update</button>
+                                    <a href="{{url('/type-kamar') }}" class="btn btn-red m-2 float-right" href=" {{url('/type-kamar') }} ">Cancel</a>
                                 </form>
                             </div>
                         </div>

@@ -30,7 +30,7 @@
   --info: #36b9cc;
   --warning: #f6c23e;
   --danger: #e74a3b;
-  --light: #f8f9fc;
+  --light: #616161;
   --dark: #5a5c69;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
@@ -10734,7 +10734,7 @@ a:focus {
 }
 
 .bg-gradient-dark {
-  background-color: #5a5c69;
+  background-color: #6a5c6f;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #5a5c69), to(#373840));
   background-image: linear-gradient(180deg, #5a5c69 10%, #373840 100%);
   background-size: cover;

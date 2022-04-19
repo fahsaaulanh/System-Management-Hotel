@@ -3,7 +3,9 @@
 
 :root{
 
---purple : #e468c3;
+
+--purple: #9561e2;
+--purple-light: #d26ec8;
 --success : #68e472;
 --warning : #fff566;
 --dark : #343534 !important;
@@ -38,9 +40,9 @@ align-items: center;
 .card-custom::before{
   content: "";
   position: absolute;
-  height: 40%;
-  width: 100%;
-  background: var(--gradient);
+  height: 30%;
+  width: 70%;
+  background: #fff;
   border-radius: 5% 5% 0 0;
 }
 
@@ -50,7 +52,7 @@ align-items: center;
   align-items: center;
   padding: 30px;
   position: relative;
-  z-index: 100;
+  z-index: 0;
 }
 
 section .card-custom .image{
@@ -58,13 +60,12 @@ section .card-custom .image{
   width: 200px;
   border-radius: 50%;
   padding: 3px;
-  background: var(--gradient);
+  background: var(--purple);
 }
 
 section .card-custom .image img{
   height: 100%;
   width: 100%;
-  object-fit: cover;
   border-radius: 50%;
   border: 3px solid #fff;
 }
@@ -117,7 +118,7 @@ section .card-custom .image img{
 }
 
 .card-custom .button button{
-  background: var(--gradient);
+  background: var(--purple);
   outline: none;
   border: none;
   color: #fff;
@@ -129,7 +130,7 @@ section .card-custom .image img{
 }
 
 .button button:hover{
-  background: #565557;
+  background: var(--purple-light);
 }
 
 .swiper-pagination{

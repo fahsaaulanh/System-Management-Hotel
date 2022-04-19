@@ -33,24 +33,24 @@
                             <div class="card card-danger card-outline">
                                 <div class="card-header">
                                     <div class="row">
-                                        <div class="col-2">
-                                            <a type="button" class="btn btn-info" href="{{route('kamar.create')}}">
+                                        <div class="col-sm-2">
+                                            <a type="button" class="btn btn-pink" href="{{route('kamar.create')}}">
                                                 <i class="fa fa-plus"></i>
                                                 Add Room
                                             </a>
                                         </div>
-                                        <div class="col-4">
-                                            <a class="btn btn-danger " href="/laporan/kamar/download">
+                                        <div class="col-sm-4">
+                                            <a class="btn btn-purple-light " href="/laporan/kamar/download">
                                                 <i class="fas fa-file-pdf"> </i> Download
                                             </a>
                                         </div>
-                                        <div class="col-6">
-                                            <div class="input-group input-group-sm float-right" style="width: 250px;">
+                                        <div class="col-sm-6">
+                                            <div class="input-group input-group-sm float-sm-right" style="width: 200px;">
                                                 <form action="{{route('kamar-search') }}" method="get">
                                                     @csrf
                                                     <div class="input-group-append">
                                                         <input type="text" class="form-control float-right" name="no_kamar" placeholder="Search no room.." value="">
-                                                        <button type="submit" class="btn btn-secondary">
+                                                        <button type="submit" class="btn btn-purple">
                                                             <i class="fas fa-search"></i>
                                                         </button>
                                                     </div>
@@ -69,7 +69,8 @@
                                                 <th scope="col">No Room</th>
                                                 <th scope="col">Type</th>
                                                 <th scope="col">Max Guest</th>
-                                                <th style="width: 100px;">Status</th>
+                                                <th scope="col">Status</th>
+                                                <th></th>
                                                 <th></th>
                                             </tr>
                                         </thead>
@@ -85,22 +86,18 @@
                                                     @elseif ( $kamar->status == 'Occupied')
                                                     <div class="badge badge-danger">{{ $kamar->status}}</div>
                                                     @else
-                                                    <div class="badge badge-warning">- {{ $kamar->status}} -</div>
+                                                    <div class="badge badge-warning"> {{ $kamar->status}} </div>
                                                     @endif
                                                 </td>
                                                 <td>
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <a class="btn btn-outline-success" href="{{route('kamar.edit', ['kamar'=>$kamar->id])}}"><i class="fa fa-pencil"></i> Edit</a>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <form action="{{route('kamar.destroy',['kamar'=>$kamar->id])}}" method="post">
-                                                                @method('DELETE')
-                                                                @csrf
-                                                                <button type="button " href="" class="btn btn-outline-danger"><i class="fa fa-trash"></i></button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
+                                                    <a class="btn btn-green" href="{{route('kamar.edit', ['kamar'=>$kamar->id])}}"><i class="fa fa-pencil"></i></a>
+                                                </td>
+                                                <td>
+                                                    <form action="{{route('kamar.destroy',['kamar'=>$kamar->id])}}" method="post">
+                                                        @method('DELETE')
+                                                        @csrf
+                                                        <button type="button " href="" class="btn btn-red"><i class="fa fa-trash"></i></button>
+                                                    </form>
                                                 </td>
                                             </tr>
                                             @empty

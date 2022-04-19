@@ -35,19 +35,19 @@
                                 @csrf
                                 <div class="row">
 
-                                    <div class="col-6">
+                                    <div class="col-sm-6">
                                         <label for="type_kamar_id">Room Type</label>
                                         <div class="input-group input-group-sm">
                                             <input type="text" class="form-control  @error('type_kamar_id') is-invalid @enderror" value="{{ app('request')->input('jenis') ?? ''}}" disabled>
                                             <input type="hidden" class="" name="type_kamar_id" value="{{ app('request')->input('type_kamar_id') ?? ''}}">
                                             <span class="input-group-append">
-                                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-xl">Search</button>
+                                                <button type="button" class="btn btn-orange" data-toggle="modal" data-target="#modal-xl">Search</button>
                                             </span>
                                         </div>
                                     </div>
                                     @include('kamar.form')
-                                    <button type="submit" class="btn btn-info m-2">Add</button>
-                                    <a href="{{url('/kamar') }}" class=" btn btn-danger m-2">Cancel</a>
+                                    <button type="submit" class="btn btn-purple-light float-right m-2">Add</button>
+                                    <a href="{{url('/kamar') }}" class=" btn btn-red float-right m-2">Cancel</a>
                             </form>
                         </div>
                     </div>
