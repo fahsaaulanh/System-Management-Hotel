@@ -1,0 +1,83 @@
+:root {
+    --blue: #60b8ff;
+    --indigo: #6574cd;
+    --purple: #9561e2;
+    --purple-light: #d26ec8;
+    --pink: #ef34a5;
+    --red: #ff5842;
+    --orange: #f6993f;
+    --yellow: #ffed4a;
+    --green: #83ff7a;
+    --teal: #4dc0b5;
+    --cyan: #6cb2eb;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #3490dc;
+    --secondary: #6c757d;
+    --success: #55f35a;
+    --info: #6cb2eb;
+    --warning: #ffed4a;
+    --danger: #e3342f;
+    --light: #f8f9fa;
+    --dark: #343a40;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-blue {
+  color: #fff !important;
+  background-color: var(--blue);
+  border-color: var(--blue);
+}
+
+.btn-indigo {
+  color: #fff !important;
+  background-color: var(--indigo);
+  border-color: var(--indigo);
+}
+
+.btn-purple {
+  color: #fff !important;
+  background-color: var(--purple);
+  border-color: var(--purple);
+}
+
+.btn-purple-light {
+  color: #fff !important;
+  background-color: var(--purple-light);
+  border-color: var(--purple-light);
+}
+
+.btn-pink {
+  color: #fff !important;
+  background-color: var(--pink);
+  border-color: var(--pink);
+}
+
+.btn-red {
+  color: #fff !important;
+  background-color: var(--red);
+  border-color: var(--red);
+}
+
+.btn-orange {
+  color: #fff !important;
+  background-color: var(--orange);
+  border-color: var(--orange);
+}
+
+.btn-yellow {
+  color: #fff !important;
+  background-color: var(--yellow);
+  border-color: var(--yellow);
+}
+
+.btn-green
+{
+     color: #fff !important;
+  background-color: var(--green);
+  border-color: var(--green);
+}
