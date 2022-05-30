@@ -35,8 +35,8 @@
                                 <form action="{{ route('tamu.update', ['tamu' => $tamu->id ]) }}" method="post">
                                     @method('PATCH')
                                     @include('tamu.form')
-                                    <button type="submit" class="btn btn-success m-2 float-right">Update</button>
-                                    <a href="{{url('/tamu') }}" class="btn btn-danger m-2 float-right" href=" {{url('/tamu') }} ">Cancel</a>
+                                    <button type="submit" class="btn btn-purple-light m-2 float-right">Update</button>
+                                    <a href="{{url('/tamu') }}" class="btn btn-red m-2 float-right" href=" {{url('/tamu') }} ">Cancel</a>
                                 </form>
                             </div>
                         </div>

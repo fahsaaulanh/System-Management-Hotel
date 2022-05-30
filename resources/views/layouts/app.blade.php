@@ -32,7 +32,7 @@
 
 </head>
 
-<body id="page-top hold-transition sidebar-mini layout-fixed">
+<body id="page-top sidebar-mini layout-fixed">
     @include('sweetalert::alert')
 
     <!-- Page Wrapper -->
@@ -265,13 +265,12 @@
 
 
 
-
+                    <!-- End of Footer -->
                 </div>
                 <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
-
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
@@ -280,13 +279,14 @@
                     </div>
                 </div>
             </footer>
-            <!-- End of Footer -->
+
 
         </div>
         <!-- End of Content Wrapper -->
 
     </div>
     <!-- End of Page Wrapper -->
+
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
@@ -344,6 +344,8 @@
 
 
     @stack('scripts')
+
 </body>
+
 
 </html>

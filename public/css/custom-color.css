@@ -3,7 +3,7 @@
     --indigo: #6574cd;
     --purple: #9561e2;
     --purple-light: #d26ec8;
-    --pink: #ef34a5;
+    --pink: #ff85ce !important;
     --red: #e3342f;
     --orange: #f6993f;
     --yellow: #ffed4a;
@@ -28,4 +28,71 @@
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, var(--purple)), to(var(--purple-light)));
   background-image: linear-gradient(180deg, var(--purple) 40%, var(--purple-light) 100%);
   background-size: cover;
+}
+
+/*border card*/
+.border-left-purple {
+  border-left: 0.25rem solid var(--purple) !important;
+}
+
+.border-bottom-purple {
+  border-bottom: 0.25rem solid var(--purple) !important;
+}
+.border-left-pink {
+  border-left: 0.25rem solid var(--pink) !important;
+}
+
+.border-bottom-pink {
+  border-bottom: 0.25rem solid var(--pink) !important;
+}
+.border-left-purple-light {
+  border-left: 0.25rem solid var(--purple-light) !important;
+}
+
+.border-bottom-purple-light {
+  border-bottom: 0.25rem solid var(--purple-light) !important;
+}
+
+/*text color*/
+.text-purple {
+  color: var(--purple) !important;
+}
+.text-pink {
+  color: var(--pink) !important;
+}
+.text-purple-light {
+  color: var(--purple-light) !important;
+}
+
+
+/*btn outline*/
+.btn-outline-purple {
+  color: var(--purple);
+  border-color: var(--purple);
+}
+
+.btn-outline-purple:hover {
+  color: #fff;
+  background-color: var(--purple);
+  border-color: var(--purple);
+}
+.btn-outline-pink {
+  color: var(--pink);
+  border-color: var(--pink);
+}
+
+.btn-outline-pink:hover {
+  color: #fff;
+  background-color: var(--pink);
+  border-color: var(--pink);
+}
+.btn-outline-purple-light {
+  color: var(--purple-light);
+  border-color: var(--purple-light);
+}
+
+.btn-outline-purple-light:hover {
+  color: #fff;
+  background-color: var(--purple-light);
+  border-color: var(--purple-light);
 }

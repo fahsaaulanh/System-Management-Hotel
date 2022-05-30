@@ -10,11 +10,11 @@
                 <div class="row">
                     <!-- pdf tamu -->
                     <div class="col-4 mb-2">
-                        <div class="card  border-left-secondary shadow h-100 ">
+                        <div class="card  border-left-purple-light shadow h-100 ">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center m-auto ">
                                     <div class="col">
-                                        <div class="h6 font-weight-bold text-secondary">Laporan Daftar Tamu
+                                        <div class="h6 font-weight-bold text-purple-light">Laporan Daftar Tamu
                                         </div>
                                     </div>
                                     <div class="col-auto">
@@ -23,7 +23,7 @@
                                 </div>
                                 <div class="row text-center">
                                     <div class="col-12 ">
-                                        <a class="btn btn-outline-secondary position-relative mt-2" href="/laporan/tamu/download">
+                                        <a class="btn btn-outline-purple-light position-relative mt-2" href="/laporan/tamu/download">
                                             <i class="fas fa-download"> </i> Download
                                         </a>
                                     </div>
@@ -34,11 +34,11 @@
 
                     <!-- daftar kamar -->
                     <div class="col-4 mb-2">
-                        <div class="card border-left-secondary shadow h-100 ">
+                        <div class="card border-left-purple shadow h-100 ">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center m-auto ">
                                     <div class="col">
-                                        <div class="h6 font-weight-bold text-secondary">Lap. Daftar Kamar
+                                        <div class="h6 font-weight-bold text-purple">Lap. Daftar Kamar
                                         </div>
                                     </div>
                                     <div class="col-auto">
@@ -47,7 +47,7 @@
                                 </div>
                                 <div class="row text-center">
                                     <div class="col-12 ">
-                                        <a class="btn btn-outline-secondary position-relative mt-2" href="/laporan/kamar/download">
+                                        <a class="btn btn-outline-purple position-relative mt-2" href="/laporan/kamar/download">
                                             <i class="fas fa-download"> </i> Download
                                         </a>
                                     </div>
@@ -58,11 +58,11 @@
 
                     <!-- daftar Type kamar -->
                     <div class="col-4 mb-2">
-                        <div class="card border-left-secondary shadow h-100 ">
+                        <div class="card border-left-pink shadow h-100 ">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center m-auto ">
                                     <div class="col">
-                                        <div class="h6 font-weight-bold text-secondary">Lap. Type Kamar
+                                        <div class="h6 font-weight-bold text-pink">Lap. Type Kamar
                                         </div>
                                     </div>
                                     <div class="col-auto">
@@ -71,7 +71,7 @@
                                 </div>
                                 <div class="row text-center">
                                     <div class="col-12 ">
-                                        <a class="btn btn-outline-secondary position-relative mt-2" href="/laporan/type-kamar/download">
+                                        <a class="btn btn-outline-pink position-relative mt-2" href="/laporan/type-kamar/download">
                                             <i class="fas fa-download"> </i> Download
                                         </a>
                                     </div>
@@ -82,11 +82,11 @@
 
                     <!-- daftar Layanan -->
                     <div class="col-4 mb-2">
-                        <div class="card border-left-secondary shadow h-100 ">
+                        <div class="card border-left-purple-light shadow h-100 ">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center m-auto ">
                                     <div class="col">
-                                        <div class="h6 font-weight-bold text-secondary">Lap. Daftar Layanan
+                                        <div class="h6 font-weight-bold text-purple-light">Lap. Daftar Layanan
                                         </div>
                                     </div>
                                     <div class="col-auto">
@@ -95,7 +95,7 @@
                                 </div>
                                 <div class="row text-center">
                                     <div class="col-12 ">
-                                        <a class="btn btn-outline-secondary position-relative mt-2" href="/laporan/layanan/download">
+                                        <a class="btn btn-outline-purple-light position-relative mt-2" href="/laporan/layanan/download">
                                             <i class="fas fa-download"> </i> Download
                                         </a>
                                     </div>
@@ -106,11 +106,11 @@
 
                     <!-- daftar jenis layanan -->
                     <div class="col-4 mb-2">
-                        <div class="card border-left-secondary shadow h-100 ">
+                        <div class="card border-left-purple shadow h-100 ">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center m-auto ">
                                     <div class="col">
-                                        <div class="h6 font-weight-bold text-secondary">Lap. Jenis Layanan
+                                        <div class="h6 font-weight-bold text-purple">Lap. Jenis Layanan
                                         </div>
                                     </div>
                                     <div class="col-auto">
@@ -119,7 +119,7 @@
                                 </div>
                                 <div class="row text-center">
                                     <div class="col-12 ">
-                                        <a class="btn btn-outline-secondary position-relative mt-2" href="/laporan/jenis-layanan/download">
+                                        <a class="btn btn-outline-purple position-relative mt-2" href="/laporan/jenis-layanan/download">
                                             <i class="fas fa-download"> </i> Download
                                         </a>
                                     </div>

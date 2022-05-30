@@ -89,11 +89,11 @@
             <label>Gender</label>
             <div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="jk" id="laki_laki" value="L" {{ old('jk')=='L' ? 'checked': '' }} {{ $tamu['jk']=='L' ? 'checked': '' }}>
+                    <input class="form-check-input" type="radio" name="jk" id="laki_laki" value="L" {{ old('jk')=='L' ? 'checked': '' }}>
                     <label class="form-check-label" for="laki_laki">Male</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="jk" id="perempuan" value="P" {{ old('jk')=='P' ? 'checked' : '' }} {{ $tamu['jk']=='P' ? 'checked': '' }}>
+                    <input class="form-check-input" type="radio" name="jk" id="perempuan" value="P" {{ old('jk')=='P' ? 'checked' : '' }}>
                     <label class="form-check-label" for="perempuan">Famale</label>
                 </div>
                 @error('jk')

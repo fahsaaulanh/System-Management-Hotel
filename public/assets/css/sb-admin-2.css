@@ -11,13 +11,28 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
-  --blue: #4e73df;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
-  --red: #e74a3b;
-  --orange: #fd7e14;
-  --yellow: #f6c23e;
+    --blue: #3490dc;
+    --indigo: #6574cd;
+    --purple: #9561e2;
+    --purple-light: #d26ec8;
+    --pink: #ef34a5;
+    --red: #e3342f;
+    --orange: #f6993f;
+    --yellow: #ffed4a;
+    --green: #4dff77;
+    --teal: #4dc0b5;
+    --cyan: #6cb2eb;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #3490dc;
+    --secondary: #6c757d;
+    --success: #38c172;
+    --info: #6cb2eb;
+    --warning: #ffed4a;
+    --danger: #e3342f;
+    --light: #f8f9fa;
+    --dark: #343a40;
   --green: #1cc88a;
   --teal: #20c9a6;
   --cyan: #36b9cc;
@@ -10903,6 +10918,20 @@ a:focus {
   border-bottom: 0.25rem solid #5a5c69 !important;
 }
 
+.border-left-purple {
+  border-left: 0.25rem solid var(--purple) !important;
+}
+
+.border-bottom-purple {
+  border-bottom: 0.25rem solid var(--purple) !important;
+}
+.border-left-green {
+  border-left: 0.25rem solid greenyellow !important;
+}
+
+.border-bottom-green {
+  border-bottom: 0.25rem solid greenyellow !important;
+}
 .progress-sm {
   height: .5rem;
 }

@@ -26,11 +26,11 @@
             <div class="row">
                 @foreach ($checkins as $checkin)
                 <div class="col-4 mb-4">
-                    <div class="card border-left-secondary shadow h-100 py-2">
+                    <div class="card border-left-pink shadow h-100 py-2">
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
-                                    <div class="h5 font-weight-bold text-secondary text-uppercase mb-1">{{$checkin->kamar->no_kamar}}
+                                    <div class="h5 font-weight-bold text-pink text-uppercase mb-1">{{$checkin->kamar->no_kamar}}
                                     </div>
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-auto">
@@ -38,7 +38,7 @@
                                     </div>
                                 </div>
                                 <div class="col-4">
-                                    <i class="fas fa-bed fa-4x text-secondary"></i>
+                                    <i class="fas fa-bed fa-4x text-pink"></i>
                                 </div>
                                 <div class="row">
                                     <div class="col-12 ">
@@ -47,7 +47,7 @@
                                             @csrf
                                             <input type="hidden" name="status" value="Vacant">
                                             <input type="hidden" name="route" value="cleanUp">
-                                            <button type="submit" class="btn btn-secondary float-right" style="margin-right: 5px;">
+                                            <button type="submit" class="btn btn-outline-pink float-right" style="margin-right: 5px;">
                                                 <i class="fas fa-arrow-circle-right"></i> Clean Up
                                             </button>
                                         </form>

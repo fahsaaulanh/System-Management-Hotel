@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('custom_css')
+<link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+@endsection
 @section('content')
 <!-- Content Wrapper (Page Content) -->
 <div class="content-wrapper">
@@ -8,7 +10,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h4 class="">Checkout checkin</h4>
+                    <h4 class="">Checkout</h4>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -25,33 +27,26 @@
         <div class="container-fluid">
             <div class="row">
                 @foreach ($checkins as $checkin)
-                <div class="col-4 mb-4">
-                    <div class="card border-left-danger shadow h-100 py-2">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                    <div class="h5 font-weight-bold text-danger text-uppercase mb-1">{{$checkin->kamar->no_kamar}}
-                                    </div>
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col-auto">
-                                            <div class="text-xs mb-0 mr-3 font-weight-bold text-gray-600">{{$checkin->gelar_tamu}}{{$checkin->tamu->nama}}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <i class="fas fa-bed fa-4x text-danger"></i>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 ">
-                                        <a href="{{ url('/checkout/'.$checkin->id.'/view') }}" class="btn btn-outline-danger float-center">
-                                            Select <i class="fas fa-arrow-circle-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
+                <div class="col-sm-4 ">
+                    <div class="swiper-slide card-red">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="{{ asset('img/img4.jpg') }}" alt="">
                             </div>
+
+
+                            <br>
+                            <b class="name ">{{$checkin->kamar->no_kamar}}</b>
+                            <span class="profession">{{$checkin->gelar_tamu}}{{$checkin->tamu->nama}}</span>
+
+
+                            <a href="{{ url('/checkout/'.$checkin->id.'/view') }}" class="btn btn-pink float-center">
+                                Select <i class="fas fa-arrow-circle-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
+
                 @endforeach
             </div>
         </div>

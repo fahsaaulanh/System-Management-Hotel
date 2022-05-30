@@ -41,7 +41,7 @@
                                                     @csrf
                                                     <div class="input-group-append">
                                                         <input type="date" class="form-control float-right" name="tgl_checkin" placeholder="Search by checkin date.." value="">
-                                                        <button type="submit" class="btn btn-secondary">
+                                                        <button type="submit" class="btn btn-pink">
                                                             <i class="fas fa-search"></i>
                                                         </button>
                                                     </div>
@@ -59,6 +59,7 @@
                                     <thead>
                                         <tr class="table">
                                             <th scope="col">#Invoice</th>
+                                            <th>Guest Name</th>
                                             <th>Checkout Date</th>
                                             <th></th>
                                         </tr>
@@ -67,9 +68,10 @@
                                         @forelse ($checkins as $checkin)
                                         <tr class=" table-hover">
                                             <td>{{ $checkin->kd_invoice}}</td>
+                                            <td>{{ $checkin->tamu->nama}}</td>
                                             <td>{{ $checkin->tanggal_checkout}}</td>
                                             <td>
-                                                <a class="btn btn-info text-white" href="{{url('lap-administrasi/'.$checkin->id ) }}"><i class="fa-solid fa-eye"></i> View</a>
+                                                <a class="btn btn-purple text-white" href="{{url('lap-administrasi/'.$checkin->id ) }}"><i class="fa-solid fa-eye"></i> View</a>
                                             </td>
                                             <td></td>
                                         </tr>

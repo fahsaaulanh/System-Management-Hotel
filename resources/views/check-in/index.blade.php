@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('custom_css')
+<link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+@endsection
 @section('content')
 <!-- Content Wrapper (Page Content) -->
 <div class="content-wrapper">
@@ -25,30 +27,22 @@
         <div class="container-fluid">
             <div class="row">
                 @foreach ($kamars as $kamar)
-                <div class="col-4 mb-4">
-                    <div class="card border-left-info shadow h-100 py-2">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                    <div class="h5 font-weight-bold text-info text-uppercase mb-1">{{$kamar->no_kamar}}
-                                    </div>
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col-auto">
-                                            <div class="text-xs mb-0 mr-3 font-weight-bold text-gray-800">{{$kamar->TypeKamar->jenis}}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <i class="fas fa-bed fa-4x text-gray-300"></i>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 ">
-                                        <a href="/checkin/create?id_kamar={{$kamar->id}}&no_kamar={{$kamar->no_kamar}}&jenis={{$kamar->TypeKamar->jenis}}&harga={{$kamar->TypeKamar->harga}}&max={{$kamar->max}}" class="btn btn-outline-info float-center">
-                                            Check In <i class="fas fa-arrow-circle-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
+                <div class="col-sm-4 ">
+                    <div class="swiper-slide card-custom">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="{{ asset('img/img1.jpg') }}" alt="">
                             </div>
+
+
+                            <div class="name-profession">
+                                <span class="name">{{$kamar->no_kamar}}</span>
+                                <span class="profession">{{$kamar->TypeKamar->jenis}}</span>
+                            </div>
+
+                            <a href="/checkin/create?id_kamar={{$kamar->id}}&no_kamar={{$kamar->no_kamar}}&jenis={{$kamar->TypeKamar->jenis}}&harga={{$kamar->TypeKamar->harga}}&max={{$kamar->max}}" class="btn btn-purple float-center">
+                                Check In <i class="fas fa-arrow-circle-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -26,8 +26,8 @@
                         <div class="card-body">
                             <form action="{{ route('checkin.store') }}" method="post">
                                 @include('check-in.form')
-                                <button type="submit" class="btn btn-success m-2 float-sm-right">Checkin</button>
-                                <a href="{{url('/checkin') }}" class=" btn btn-danger m-2 float-sm-right">Cancel</a>
+                                <button type="submit" class="btn btn-purple-light m-2 float-sm-right">Checkin</button>
+                                <a href="{{url('/checkin') }}" class=" btn btn-red m-2 float-sm-right">Cancel</a>
                             </form>
                         </div>
                     </div>

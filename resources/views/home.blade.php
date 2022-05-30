@@ -22,75 +22,60 @@
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
-            <div class="row">
-
+            <div class="row m-2">
                 <!-- Kamar kotor -->
-                <div class="col-sm-4 col-lg-3 col-8">
+                <div class="col-sm-4 ">
                     <div class="swiper-slide card-custom">
                         <div class="card-content">
                             <div class="image">
                                 <img src="{{ asset('img/img1.jpg') }}" alt="">
                             </div>
-
-
                             <div class="name-profession">
                                 <span class="name">Vacant Room</span>
                                 <span class="profession"></span>
                             </div>
-
-
-
-                            <a href="/checkin" class="button">
-                                <button class="hireMe">View Room</button>
+                            <a href="/checkin" class="btn btn-purple">
+                                Vacant Room
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-sm-4 col-lg-3 col-8">
+
+
+                <div class="col-sm-4 ">
                     <div class="swiper-slide card-custom">
                         <div class="card-content">
                             <div class="image">
                                 <img src="{{ asset('img/img2.jpg') }}" alt="">
                             </div>
-
-
                             <div class="name-profession">
                                 <span class="name">Occupied Room</span>
                                 <span class="profession"></span>
                             </div>
-
-
-
-                            <a href="/checkout" class="button">
-                                <button class="hireMe">View Room</button>
+                            <a href="/checkout" class="btn btn-purple">
+                                Occupied Room
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-sm-4 col-lg-3 col-8">
+                <div class="col-sm-4 ">
                     <div class=" swiper-slide card-custom">
                         <div class="card-content">
                             <div class="image">
                                 <img src="{{ asset('img/img3.jpg') }}" alt="">
                             </div>
-
-
                             <div class="name-profession">
                                 <span class="name">Dirty Room</span>
                                 <span class="profession"></span>
                             </div>
-
-
-
-                            <a href="/cleanup" class="button">
-                                <button class="hireMe">View Room</button>
+                            <a href="/cleanUp" class="btn btn-purple"">
+                                Dirty Room
                             </a>
                         </div>
                     </div>
                 </div>
-
 
 
             </div>

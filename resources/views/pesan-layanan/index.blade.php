@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('custom_css')
+<link href="{{ asset('css/custom-color.css') }}" rel="stylesheet">
+@endsection
 @section('content')
 <!-- Content Wrapper (Page Content) -->
 <div class="content-wrapper">
@@ -26,11 +29,11 @@
             <div class="row">
                 @foreach ($checkins as $checkin)
                 <div class="col-4 mb-4">
-                    <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card border-left-purple shadow h-100 py-2">
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
-                                    <div class="h3 font-weight-bold text-success text-uppercase mb-1">{{$checkin->kamar->no_kamar}}
+                                    <div class="h3 font-weight-bold text-purple-light text-uppercase mb-1">{{$checkin->kamar->no_kamar}}
                                     </div>
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-auto">
@@ -39,11 +42,11 @@
                                     </div>
                                 </div>
                                 <div class="col-4">
-                                    <i class="fas fa-bed fa-4x text-success"></i>
+                                    <i class="fas fa-bed fa-4x text-purple-light"></i>
                                 </div>
                                 <div class=" row">
                                     <div class="col-12 ">
-                                        <a href="{{url('/pesan-layanan/'.$checkin->id.'/pilih-menu') }}" class="btn btn-outline-success float-center">
+                                        <a href="{{url('/pesan-layanan/'.$checkin->id.'/pilih-menu') }}" class="btn btn-outline-purple float-center">
                                             View Room <i class="fas fa-arrow-circle-right"></i>
                                         </a>
                                     </div>

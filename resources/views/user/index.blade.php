@@ -31,13 +31,13 @@
                                 <h3 class="card-title">
                                     <div class="row">
                                         <div class="col-2">
-                                            <a href="{{ route('user.create') }}" class="btn btn-info text-white">
+                                            <a href="{{ route('user.create') }}" class="btn btn-pink text-white">
                                                 <i class="fa fa-plus"></i>
                                                 Add user
                                             </a>
                                         </div>
                                         <div class="col-4">
-                                            <a class="btn btn-danger " href="/laporan/user/download">
+                                            <a class="btn btn-purple " href="/laporan/user/download">
                                                 <i class="fas fa-file-pdf"> </i> Download
                                             </a>
                                         </div>
@@ -47,7 +47,7 @@
                                                     @csrf
                                                     <div class="input-group-append">
                                                         <input type="text" class="form-control float-right" name="username" placeholder="Search user name..." value="">
-                                                        <button type="submit" class="btn btn-secondary">
+                                                        <button type="submit" class="btn btn-purple-light">
                                                             <i class="fas fa-search"></i>
                                                         </button>
                                                     </div>
@@ -85,7 +85,7 @@
                                                 <form action="{{route('user.destroy',['user'=>$user->id])}}" method="post">
                                                     @method('DELETE')
                                                     @csrf
-                                                    <button type="submit" href="#" class=" btn btn-danger"><i class="fa fa-trash"></i></button>
+                                                    <button type="submit" href="#" class=" btn btn-red"><i class="fa fa-trash"></i></button>
                                                 </form>
                                             </td>
                                         </tr>
